@@ -1,0 +1,280 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: rgb(6, 6, 6);
+  color: white;
+}
+
+.main {
+  height: 90vh;
+}
+
+/* ---------------------------------navbar-------------------------------------------- */
+nav {
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  align-items: center;
+  border-bottom: 1px solid gray;
+  background-color: rgb(166, 166, 187);
+  padding: 0px 10px;
+  color: rgb(14, 105, 14);
+}
+
+nav>div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+
+
+nav h2 {
+  margin-left: 5px;
+  color: rgb(27, 82, 27);
+
+}
+
+nav p {
+  font-weight: 600;
+}
+
+nav img {
+  width: 45px;
+}
+.drop-down-container{
+  font-weight: 700;
+}
+.drop-down-container i {
+  font-weight: 700;
+}
+
+.drop-down-container ul {
+  list-style: none;
+  display: flex;
+  margin-left: -20px;
+}
+
+.drop-down-container ul li {
+  position: relative;
+  cursor: pointer;
+
+}
+
+.drop-down-container ul li:hover {
+  color: black;
+}
+
+.drop-down-container .drop-down {
+  position: absolute;
+  right: -10px;
+  top: 40px;
+  transform: translateX(0%);
+  background-color: white;
+  height: auto;
+  min-width: 8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.1rem 0;
+  visibility: hidden;
+  opacity: 0;
+
+}
+
+.drop-down-container ul li:hover>.drop-down {
+  visibility: visible;
+  opacity: 1;
+}
+
+.drop-down-container .drop-down li {
+  height: 3rem;
+  line-height: 3rem;
+  width: 100%;
+  text-align: center;
+  transition: all .3s linear;
+}
+
+.drop-down-container .drop-down li:hover {
+  background-color: gray;
+}
+
+/* ---------------------------------------------Account page----------------------------------- */
+
+.account-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.account-container {
+  width: 90%;
+  max-width: 500px;
+  max-height: 500px;
+  border: 1px solid rgb(19, 104, 19);
+  box-shadow: rgba(210, 206, 206, 0.25) 0px 25px 50px -12px;
+}
+
+.account-container>form {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+
+
+}
+
+.account-section label {
+  margin: 10px 0px;
+}
+
+.account-section input {
+  padding: 10px 5px;
+  border: 1px solid grey;
+  background-color: transparent;
+  color: gray;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+.account-section button {
+  padding: 10px 0px;
+  margin: 10px 0px;
+  cursor: pointer;
+}
+
+.account-section span {
+  color: red;
+  margin-top: 4px;
+}
+
+/* 
+---------------------------------Home Page-------------------------------------- */
+
+.movie-container {
+  width: 95%;
+  margin: auto;
+  max-width: 650px;
+}
+
+.movie-card-container {
+  border: 1px solid rgb(108, 108, 112);
+  box-shadow: rgba(86, 85, 85, 0.25) 0px 25px 50px -12px;
+  margin: 15px 0px;
+  padding: 10px;
+}
+
+.movie-card {
+  display: grid;
+  grid-template-columns: 15% 22% 60%;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.movie-card img {
+  width: 100%;
+
+  border-radius: 8px;
+}
+
+
+.movie-card>div:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.movie-card>div:nth-child(1) i {
+  font-size: 50px;
+  cursor: pointer;
+}
+
+.movie-card>div:nth-child(1) h2 {
+  margin: 0;
+}
+
+
+.movie-card>div:nth-child(3) {
+  padding-left: 10px;
+}
+
+.movie-card>div:nth-child(3) p {
+  color: gray;
+  margin: 3px;
+}
+
+.movie-card>div:nth-child(3) p:nth-child(6) {
+  margin-top: 5px;
+  color: green;
+}
+
+.movie-card>div:nth-child(3) h3 {
+  margin: 5px;
+}
+
+.movie-card-container button {
+  padding: 9px;
+  width: 100%;
+  border: 1px solid grey;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+
+}
+
+/* 
+----------------------------------------company-info------------------------------------------ */
+
+
+.company-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.company-info>div {
+  border: 1px solid gray;
+  padding: 10px;
+}
+
+.company-info>div li {
+  list-style: none;
+  margin: 5px;
+  color: gray;
+}
+
+
+@media only screen and (max-width: 768px) {
+  nav h2 {
+    display: none;
+  }
+
+  .movie-card>div:nth-child(3) p {
+    font-size: 10px;
+  }
+
+  .movie-card>div:nth-child(3) h3 {
+    font-size: 15px;
+  }
+
+  .movie-card>div:nth-child(1) i {
+    font-size: 20px;
+  }
+
+  .movie-card>div:nth-child(1) h2 {
+    font-size: 15px;
+  }
+
+  .movie-card>div:nth-child(1) p {
+    font-size: 10px;
+  }
+
+}
